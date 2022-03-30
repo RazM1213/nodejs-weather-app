@@ -22,7 +22,7 @@ weatherForm.addEventListener('submit', (e) => {
     // certain things. In this case we fech the weather for the desired location
     // and dump the data to the console.
     // Errors are handled 
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 messageOne.textContent = data.error
